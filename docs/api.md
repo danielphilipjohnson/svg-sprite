@@ -118,7 +118,7 @@ glob.sync('**/*.svg', { cwd }, (err, files) => {
       base: cwd, // Base path (see `name` argument)
       contents: fs.readFileSync(path.join(cwd, file)) // SVG file contents
     }));
-  })
+  }
 
   spriter.compile((error, result, data) => {
     for (const type of Object.values(result.css)) {
